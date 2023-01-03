@@ -1,0 +1,30 @@
+
+<html>
+    <head>
+        <title>
+            Excel file upload and processing
+        </title>
+    </head>
+    <body style="margin-top: 30px;margin-left: 30px;">
+        <form action="{% url "index" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file"
+                   title="Upload excel file"
+                   name="excel_file"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required"><br><br>
+            <input type="text"
+                   title="Write Message to customer"
+                   name="custom_message"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required">
+            <p>
+            <input type="submit"
+                   value="Upload"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+        </form>
+
+        <p></p>
+        <hr>
+    </body>
+</html>
